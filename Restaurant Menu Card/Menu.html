@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Spice Restaurant</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color:white;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:30px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+header h1{
+    font-size:45px;
+    color:gold;
+}
+
+header p{
+    color:#ddd;
+}
+
+/* CATEGORY */
+.category{
+    margin:30px 20px 10px;
+    font-size:28px;
+    color:#ffd700;
+    border-bottom:1px solid #555;
+}
+
+/* GRID */
+.menu{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+/* CARD */
+.card{
+    background: rgba(255,255,255,0.08);
+    border-radius:15px;
+    overflow:hidden;
+    backdrop-filter: blur(8px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+    background:#222;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.card-content h3{
+    color:gold;
+}
+
+.price{
+    float:right;
+    color:#ffcc00;
+}
+
+.desc{
+    font-size:14px;
+    color:#ccc;
+    margin-top:8px;
+}
+
+.rating{
+    margin-top:5px;
+    color: gold;
+}
+
+/* TAGS */
+.tag{
+    display:inline-block;
+    margin-top:6px;
+    padding:4px 8px;
+    font-size:12px;
+    border-radius:10px;
+}
+.best{background:#e74c3c;}
+.spicy{background:#f39c12;}
+.new{background:#27ae60;}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:15px;
+    background: rgba(0,0,0,0.7);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Royal Spice</h1>
+<p>Luxury Dining Experience</p>
+</header>
+
+<!-- STARTERS -->
+<h2 class="category">🥗 Starters</h2>
+<section class="menu">
+
+<div class="card">
+<img src="https://c.ndtvimg.com/2024-07/9fe2b05g_paneer-tikka_625x300_01_July_24.jpg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Paneer Tikka <span class="price">₹220</span></h3>
+<p class="desc">Grilled paneer with spices.</p>
+<div class="rating">⭐⭐⭐⭐☆</div>
+<span class="tag best">Best Seller</span>
+</div>
+</div>
+
+<div class="card">
+<img src="https://ik.imagekit.io/iwcam3r8ka/prod/blog-header/202503/10e47cbf-7aa2-48db-8504-41a2ab47a999.jpg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Chicken Lollipop <span class="price">₹260</span></h3>
+<p class="desc">Crispy fried wings.</p>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<span class="tag spicy">Spicy</span>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Fish Fry <span class="price">₹300</span></h3>
+<p class="desc">Golden fried fish.</p>
+<div class="rating">⭐⭐⭐⭐☆</div>
+</div>
+</div>
+
+</section>
+
+<!-- MAIN COURSE -->
+<h2 class="category">🍛 Main Course</h2>
+<section class="menu">
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoIycguxFgTpIN3L00tYQhJ2WkypXj5w_QkQ&s"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Chicken Biryani <span class="price">₹320</span></h3>
+<p class="desc">Spicy basmati rice.</p>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<span class="tag best">Popular</span>
+</div>
+</div>
+
+<div class="card">
+<img src="https://celloindia.co.in/cdn/shop/articles/09e4acfe3778136b196f0202b45f49d5_60e19218-7883-44c2-987f-76a01e6f3606_394x.jpg?v=1739959151"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Paneer Butter Masala <span class="price">₹260</span></h3>
+<p class="desc">Creamy tomato gravy.</p>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Mutton Curry <span class="price">₹380</span></h3>
+<p class="desc">Spicy mutton curry.</p>
+<div class="rating">⭐⭐⭐⭐☆</div>
+<span class="tag spicy">Hot</span>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.squarespace-cdn.com/content/v1/5ea3b22556f3d073f3d9cae4/1597281325866-AMSOFZQZDIOXPT7CRGIC/IMG_5494.jpeg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Veg Pulao <span class="price">₹180</span></h3>
+<p class="desc">Rice with vegetables.</p>
+<div class="rating">⭐⭐⭐⭐☆</div>
+</div>
+</div>
+
+</section>
+
+<!-- BREAD -->
+<h2 class="category">🫓 Breads</h2>
+<section class="menu">
+
+<div class="card">
+<img src="https://t3.ftcdn.net/jpg/08/95/50/04/360_F_895500474_IDUMxbOGEBn29tyPyjG8oLEEWlK8ZlOg.jpg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Butter Naan <span class="price">₹50</span></h3>
+</div>
+</div>
+
+<div class="card">
+<img src="https://www.cookwithmanali.com/wp-content/uploads/2021/07/Tandoori-Roti.jpg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Tandoori Roti <span class="price">₹30</span></h3>
+</div>
+</div>
+
+<div class="card">
+<img src="https://manekancor.com/wp-content/uploads/2025/08/11-1.jpg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Garlic Naan <span class="price">₹70</span></h3>
+</div>
+</div>
+
+</section>
+
+<!-- DESSERT -->
+<h2 class="category">🍨 Desserts</h2>
+<section class="menu">
+
+<div class="card">
+<img src="https://static.vecteezy.com/system/resources/previews/072/197/996/non_2x/delicious-gulab-jamun-sweet-treats-garnished-with-pistachios-and-rose-petals-in-a-traditional-bowl-photo.jpg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Gulab Jamun <span class="price">₹90</span></h3>
+</div>
+</div>
+
+<div class="card">
+<img src="https://i.ytimg.com/vi/qdxqip0Bgt8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCPjO2A80XRgLsPVseoe9Q8KzCccA"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Chocolate Brownie <span class="price">₹140</span></h3>
+<span class="tag new">New</span>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Ice Cream Sundae <span class="price">₹120</span></h3>
+</div>
+</div>
+
+</section>
+
+<!-- DRINKS -->
+<h2 class="category">🥤 Drinks</h2>
+<section class="menu">
+
+<div class="card">
+<img src="https://cookingfromheart.com/wp-content/uploads/2019/06/Mango-Mastani-3.jpg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Mango Shake <span class="price">₹100</span></h3>
+</div>
+</div>
+
+<div class="card">
+<img src="https://www.heinens.com/content/uploads/2022/05/Mocha-Iced-Coffee-with-Vanilla-Cold-Foam-800x550-1.jpg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Cold Coffee <span class="price">₹120</span></h3>
+</div>
+</div>
+
+<div class="card">
+<img src="https://thumb.photo-ac.com/67/679a3c1977c51f5fc3c5ae6c280415de_t.jpeg"
+onerror="this.src='https://via.placeholder.com/800x600?text=Food+Image';">
+<div class="card-content">
+<h3>Lemon Soda <span class="price">₹60</span></h3>
+</div>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Royal Spice | Premium Dining</p>
+</footer>
+
+</body>
+</html>

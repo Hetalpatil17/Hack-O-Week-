@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Registration</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background Slideshow */
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 20s infinite;
+}
+
+/* Event-related backgrounds */
+.slide:nth-child(1) {
+    background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b'); /* Sports */
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475'); /* Tech */
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad'); /* Dance */
+    animation-delay: 10s;
+}
+
+.slide:nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063'); /* Singing */
+    animation-delay: 15s;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    25% {opacity: 1;}
+    35% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+/* Dark Overlay */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+/* Registration Box */
+.container {
+    background: rgba(0,0,0,0.75);
+    padding: 40px;
+    border-radius: 20px;
+    width: 370px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+
+    animation: zoomIn 1s ease;
+}
+
+/* Animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #00f7ff;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00f7ff;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* Success Message */
+.success {
+    display: none;
+    margin-top: 15px;
+    color: lightgreen;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="slideshow">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+</div>
+
+<div class="overlay"></div>
+
+<!-- Registration Form -->
+<div class="container">
+    <h2>🎉 Register for Event</h2>
+
+    <form id="form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <select required>
+            <option value="">Select Event</option>
+            <option>Sports Event</option>
+            <option>Tech Event</option>
+            <option>Dance Event</option>
+            <option>Singing Event</option>
+        </select>
+
+        <input type="date" required>
+
+        <button type="submit">Register Now</button>
+    </form>
+
+    <div class="success" id="successMsg">
+        🎊 Registration Successful!
+    </div>
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("successMsg").style.display = "block";
+    this.reset();
+});
+</script>
+
+</body>
+</html>
